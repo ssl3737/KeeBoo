@@ -1,0 +1,181 @@
+<div ng-controller="NavigationCtrl">
+    <header class="header-login-signup">
+        <div class="header-limiter">
+            <h1 ng-show="!loggedIn"><a href="#">Welcome to <span>KeeBoo</span></a></h1>
+            <ul>
+                <li>
+                    <a href="" role="presentation" ng-show="!loggedIn" ng-click='openLoginModal()'>
+                        <h4>Login</h4></a>
+                </li>
+                <li>
+                    <a href="" role="presentation" ng-show="!loggedIn" ng-click='openSignUpModal()'>
+                        <h4>Sign up</h4></a>
+                </li>
+                <li></li>
+            </ul>
+            <div class="header-user-menu" ng-show="loggedIn">
+                <img src="images/car.png" alt="User Image" />
+                <ul>
+                    <li><a href="#"><i class="fa fa-cog fa-spin"></i>Settings</a></li>
+                    <li><a href="" role="presentation" ng-show="loggedIn" ng-click='logout()'>
+                      <i class="fa fa-sign-out"></i>Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <aside class="sidebar-left-collapse" ng-show="loggedIn">
+        <a href="#/home" class="company-logo">KeeBoo</a>
+        <div class="profile">
+            <div class="profile_pic">
+                <img src="images/nam.png" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>{{username}}</h2>
+            </div>
+        </div>
+        <br/><br/><br/>
+        <div class="sidebar-links">
+            <div class="link-blue selected">
+                <a href="#/home" role="presentation" ng-show="loggedIn">
+                    <i class="fa fa-home"></i>Home
+                </a>
+
+            </div>
+
+            <div class="link-red">
+                <a href="" role="presentation" ng-show="loggedIn">
+                    <i class="fa fa-heart-o"></i>Stats
+                </a>
+                <ul class="sub-links">
+                    <li><a href="#/distance">Distance Travelled</a></li>
+                    <li><a href="#/longestdrive">Longest Drive</a></li>
+                    <li><a href="#/fuel">Fuel Consumption</a></li>
+                    <li><a href="#/hardbrakes">Hard Brakes</a></li>
+                </ul>
+            </div>
+
+            <div class="link-yellow">
+
+                <a href="#/users" role="presentation" ng-show="loggedIn">
+                    <i class="fa fa-map-marker"></i>Users Map
+                </a>
+            </div>
+
+            <div class="link-green" role="presentation" ng-show="loggedIn">
+
+                <a href="#/cars">
+                    <i class="fa fa-car"></i>Cars
+                </a>
+
+                <ul class="sub-links">
+                    <li><a href="#">Car 1</a></li>
+                    <li><a href="#">Car 2</a></li>
+                    <li><a href="#">Car 3</a></li>
+                    <li><a href="#">Car 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Modal -->
+    <div class="modal fade" id="login-dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form ng-submit="loginClicked()">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" ng-model="username" placeholder="Username" aria-describedby="basic-addon1">
+                            <input type="password" class="form-control" ng-model="password" placeholder="Password" aria-describedby="basic-addon1">
+                            <div class="alert alert-info" role="alert" ng-show="wrongInfo">Something wrong, try again?</div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="signup-dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form ng-submit="signupClicked()">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Sign Up</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" ng-model="username" placeholder="Username" aria-describedby="basic-addon1">
+                            <input type="password" class="form-control" ng-model="password" placeholder="Password" aria-describedby="basic-addon1">
+                            <input type="email" class="form-control" ng-model="email" placeholder="Email" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sidebar -->
+<script>
+    $(function() {
+        var links = $('.sidebar-links > div');
+        links.on('click', function() {
+            links.removeClass('selected');
+            $(this).addClass('selected');
+        });
+    });
+</script>
+
+<!-- Search Bar -->
+<script>
+$(document).ready(function() {
+		$('.header-login-signup form').on('click', function(e) {
+				// If the form (which is turned into the search button) was
+				// clicked directly, toggle the visibility of the search box.
+				if (e.target == this) {
+						$(this).find('input').toggle();
+				}
+		});
+});
+</script>
+
+<!-- Account dropdown -->
+<script>
+    $(document).ready(function() {
+
+        var userMenu = $('.header-user-dropdown .header-user-menu');
+
+        userMenu.on('touchend', function(e) {
+
+            userMenu.addClass('show');
+
+            e.preventDefault();
+            e.stopPropagation();
+
+        });
+
+        // This code makes the user dropdown work on mobile devices
+
+        $(document).on('touchend', function(e) {
+
+            // If the page is touched anywhere outside the user menu, close it
+            userMenu.removeClass('show');
+
+        });
+
+    });
+</script>

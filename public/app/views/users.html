@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Users Map</h1>
+    <p>See where your friends are and check the current active cars</p>
+    <div class="alert alert-warning" id="fadein" role="alert">
+      <h2>Active Cars</h2>
+      Vancouver: {{countVanCars}} <br/>
+      Burnaby: {{countBurCars}}  <br/>
+      Coquitlam: {{countCoqCars}} <br/>
+    </div>
+  </div>
+  <div id="trip-content">
+      <div id="trip-map">
+          <div id="map-canvas"></div>
+          <div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+          </div>
+      </div>
+  </div>
+<br/>
+<!--
+<div class="positionTable" style="margin-top:-40px; margin-left:250px;">
+      <table align="center" style="position: absolute; z-index:100;">
+        <tr>
+          <td style="text-align:center;">
+            <Font size=5>
+            <strong>VANCOUVER</strong>
+          </td>
+          <td width="24px;">
+          </td>
+          <td style="text-align:center;">
+            <Font size=5>
+            <strong>BURNABY</strong>
+          </td>
+          <td width="24px;">
+          </td>
+          <td style="text-align:center;">
+            <Font size=5>
+            <strong>COQUITLAM</strong>
+          </td>
+        </tr>
+        <tr>
+            <td>
+              <p class="lead" style="font-size:20px"><strong>Active Cars: {{countVanCars}}</strong></p>
+            </td>
+            <td>
+            </td>
+            <td>
+              <p class="lead" style="font-size:20px"><strong>Active Cars: {{countBurCars}}</strong></p>
+            </td>
+            <td>
+            </td>
+            <td>
+                  <p class="lead" style="font-size:20px"><strong>Active Cars: {{countCoqCars}}</strong></p>
+            </td>
+        </tr>
+</div>
+-->
+</div>

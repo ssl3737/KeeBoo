@@ -1,0 +1,84 @@
+
+  <div id="slides_control" class="img-responsive">
+     <carousel interval="myInterval">
+       <slide ng-repeat="slide in slides" active="slide.active">
+         <img ng-src="images/{{slide.image}}" style="margin:auto;">
+       </slide>
+     </carousel>
+   </div>
+<div class="container2">
+<div class="move1">
+      <div class="x_panel tile fixed_height_320 overflow_hidden">
+          <div class="x_title">
+              <h3>Fuel</h3>
+              <div class="clearfix"></div>
+          </div>
+          <div class="x_content">
+
+              <table class="" style="width:100%">
+                  <tr>
+                      <th style="width:37%;">
+                          <p>Average Price Today</p>
+                          <br/>
+                            <h4 ng-repeat="x in gas" style="color:red">
+                              {{ x.location + ': ' + x.price }}
+                            </h4>
+
+                      </th>
+                  </tr>
+              </table>
+          </div>
+      </div>
+  </div>
+<div class="move2">
+      <div class="x_panel2 tile fixed_height_320 overflow_hidden">
+          <div class="x_title">
+              <h3>Longest Drive</h3>
+              <div class="clearfix"></div>
+          </div>
+          <div class="x_content">
+              <table class="" style="width:100%">
+                  <tr>
+                      <th style="width:37%;">
+                          <p>Today (km)</p>
+                      </th>
+                  </tr>
+                  <tr>
+                      <td>
+                        <canvas id="doughnut" class="chart chart-doughnut"
+                          chart-data="data" chart-labels="labels" height="250" width="500" style="margin: 50px -40px 0px">
+                        </canvas>
+                      </td>
+                  </tr>
+              </table>
+          </div>
+      </div>
+  </div>
+
+
+<div class="move3">
+      <div class="x_panel3 tile fixed_height_320 overflow_hidden">
+          <div class="x_title">
+              <h3>Hard Brakes</h3>
+              <div class="clearfix"></div>
+          </div>
+          <div class="x_content">
+
+              <table class="" style="width:100%">
+                  <tr>
+                      <th style="width:37%;">
+                          <p>This Month</p>
+                      </th>
+                  </tr>
+                  <tr>
+                      <td>
+                        <canvas id="bar" class="chart chart-bar"
+                          chart-data="datas" chart-labels="label" height="10" width="50" style="margin: 15px 10px 10px 0">
+                        </canvas
+                      </td>
+                  </tr>
+              </table>
+          </div>
+      </div>
+</div>
+</div>

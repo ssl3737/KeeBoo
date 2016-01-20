@@ -1,0 +1,379 @@
+/* Space out content a bit */
+html {
+    height: 40%;
+}
+body {
+  height: 40%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #eaf0f2;
+}
+
+.jumbotron {
+  background: #eaf0f2;
+}
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 800px;
+  }
+}
+.container {
+    height: 100%;
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Customize container for home page*/
+@media (min-width: 768px) {
+  .container2 {
+    max-width: 80%;
+    margin-right: 0;
+    margin-left: 238px;
+  }
+}
+.container2 {
+    height: 100%;
+}
+.container2-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.big-button {
+    height: 50%;
+    width: 50%;
+    max-width: 190px;
+    float: left;
+    border: solid;
+    position: relative;
+}
+
+.button-icon {
+    height: 60%;
+}
+
+.button-label {
+    height: 40%;
+    text-align: center;
+    padding-top: 10px;
+}
+.button-icon  img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 30px;
+}
+
+.home {
+    bottom: 20px;
+    top: 20px;
+    /* right: 20px; */
+    left: 20px;
+    height: 100%;
+    /* position: absolute; */
+}
+.nav-brand-img {
+    height: 150%;
+    margin-top: -5px;
+}
+
+.friend-image {
+    width: 60px;
+    height: 60px;
+    border: solid;
+    margin-top: 10px;
+    margin-left: 6px;
+    margin-right: 5px;
+}
+
+#trip-content {
+    height: 550%;
+    width: 125%;
+    position: relative;
+    right: 50px;
+    top: -40px;
+}
+
+#trip-map {
+    height: 100%;
+}
+
+#map-canvas {
+    height: 100%;
+}
+
+
+.friendDetails.list-group-item-heading {
+    /*line-height: 2;*/
+}
+
+.view-placeholder {
+    height: 100%;
+}
+
+.label {
+  color: black;
+}
+
+
+/* main page contents */
+.image-bg-fluid-height,
+.image-bg-fixed-height {
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.image-bg-fluid-height {
+	background: url('../images/main_picture3.jpg') no-repeat center center scroll;
+    padding: 100px 0;
+}
+
+.image-bg-fixed-height {
+	background: url('../images/main_picture3.jpg') no-repeat center center scroll;
+    height: 450px;
+}
+
+.img-center {
+	margin: 0 auto;
+}
+
+/* video */
+.centerVideo {
+  margin: 0 auto;
+}
+
+/* carousel */
+#slides_control > div{
+  height: 400px;
+}
+img{
+  margin:auto;
+  width: 1050px;
+  max-height: 400px !important;
+}
+#slides_control {
+  position:relative;
+  width: 82%;
+  left: 220px;
+  top:40px;
+  padding: 15px;
+}
+
+/* profile picture */
+
+.profile_pic {
+    width: 35%;
+    float: left;
+}
+
+.img-circle.profile_img {
+    width: 70%;
+    background: #fff;
+    margin-left: 15%;
+    z-index: 1000;
+    position: inherit;
+    margin-top: 20px;
+    border: 1px solid rgba(52, 73, 94, 0.44);
+    padding: 4px;
+}
+
+.profile_info {
+    padding: 25px 10px 10px;
+    width: 65%;
+    float: left;
+}
+
+.profile_info span {
+    font-size: 13px;
+    line-height: 30px;
+    color: #BAB8B8;
+}
+
+.profile_info h2 {
+    font-size: 14px;
+    color: #ECF0F1;
+    margin: 0;
+    font-weight: 300;
+}
+
+/*home page contents tile*/
+.x_panel {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 17px;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #E6E9ED;
+}
+
+.x_panel2 {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 17px;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #E6E9ED;
+}
+
+.x_panel3 {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 17px;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #E6E9ED;
+}
+
+.x_title {
+    border-bottom: 2px solid #E6E9ED;
+    padding: 1px 5px 6px;
+    margin-bottom: 10px;
+}
+
+.x_content {
+    padding: 0 5px 6px;
+    position: relative;
+    width: 100%;
+    float: left;
+    clear: both;
+    margin-top: 5px;
+}
+
+.fixed_height_320 {
+    height: 420px;
+}
+
+.tile {
+    overflow: hidden;
+}
+
+/* home page fuel, longest drive, and hard brakes charts */
+.move1 {
+      float: left;
+      width: 450px;
+}
+
+.move2 {
+      float: right;
+      width: 500px;
+}
+
+.move3 {
+      margin-top:80px;    
+}
+
+/* fadein animation */
+#fadein {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}

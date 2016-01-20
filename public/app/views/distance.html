@@ -1,0 +1,24 @@
+<div class="container" style="border:1">
+  <div class="jumbotron">
+    <h1>Distance Travelled</h1>
+    <p>Select a Date to see how many kilometers your friends travelled</p>
+    <div class="alert alert-warning" id="fadein" role="alert" ng-hide="getMax() == 0">
+      <h3>{{ getName() }}</h3> has the longest distance travelled with {{ getMax() }} Km
+    </div>
+  </div>
+
+  <form name="myForm">
+    <label for="repeatSelect" placeholer="Select"> Select a Date : </label> &nbsp;
+    <select class="form-control dropdown-toggle" style="display:inline !important ;width:30%" name="repeatSelect" id="repeatSelect" ng-model="dropdata.repeatSelect">
+      <option ng-repeat="option in dropdata.availableOptions" value="{{option.date}}">{{option.date}}</option>
+    </select>
+  </form>
+  <br/>
+  <div class="simple">
+    <canvas id="line" class="chart chart-bar" chart-data="data"
+      chart-labels="labels" chart-series="series" chart-colours="colours"
+      chart-click="onClick" >
+    </canvas>
+  </div>
+
+</div>
