@@ -1,7 +1,9 @@
 # keeboo
 
-Collaborated with a group of five members to make a product for an industry sponsored project from Moovee Innovations Inc. Developed a geospatial based UX/UI on social drive with location triggered point-of-interest, a car health, driver behavioural dashboard, and GPS navigational vectors. Technologies involved HTML, CSS, AngularJS, Node.js, and Express. The project was managed with a scrum methodology and the use of git in Ubuntu environment.
-
-- Led a team to accomplish our task in a timely manner. Developed a mock-up site and implemented a map section where I imported google map api that shows point-of-interests selected by the user. Also added more features in Stats part, where I calculated total distance traveled, average fuel rate, average distance traveled, etc. 
+-	Collaborated with a group of five members to make a product for an industry sponsored project from Moovee Innovations Inc. 
+-	Led a team to accomplish our task in a timely manner, organized and priortize tasks, and provided technical support to team members. 
+-	Contributed programming skills by creating MarkerClusterer objects using Google Maps API, adding point-of-interest icons on the map,     and creating JSON data with polygon for drawing Vancouver, Burnaby, and Coquitlam on the map.
+-	Created functions such as total distance traveled, average fuel rate, average distance traveled, and the number of active cars shown on   the map. 
+-	Technologies involved HTML, CSS, AngularJS, Node.js, and Express. The project was managed with a Scrum Methodology and the use of Git    in Ubuntu environment.
 
 Got permission from the company to upload front-end side that I did.
