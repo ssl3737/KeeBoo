@@ -7,3 +7,5 @@
 -	Technologies involved HTML, CSS, AngularJS, Node.js, and Express. The project was managed with a Scrum Methodology and the use of Git    in Ubuntu environment.
 
 Got permission from the company to upload front-end side that I did.
+
+http://ghj.me/#/
